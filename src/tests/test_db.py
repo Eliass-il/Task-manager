@@ -7,7 +7,7 @@ from sqlalchemy.ext.asyncio import create_async_engine
 @pytest.mark.asyncio
 async def test_database_connection():
     test_url = dotenv_values(".env.test").get("TEST_DATABASE_URL")
-    assert test_url, "postgresql+psycopg_async://taskmanager:0001@127.0.0.1:5432/taskmanager_test"
+    assert test_url, "Add TEST_DATABASE_URL in env.test"
 
     engine = create_async_engine(test_url)
 
