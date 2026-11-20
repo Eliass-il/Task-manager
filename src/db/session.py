@@ -4,7 +4,7 @@ from src.db.base import Base
 
 settings = get_settings()
 
-engine = create_async_engine(settings.database_url, echo = True)
+engine = create_async_engine(settings.database_url, echo = False)
 SessionFactory = async_sessionmaker(bind=engine, expire_on_commit=False)
 
 async def init_db():
